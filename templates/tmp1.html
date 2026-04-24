@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>url_for函数的使用</title>
+</head>
+<body>
+    <h1>url_for函数</h1>
+    <hr>
+    {{ url_for('index') }}
+    <br>
+    {{ url_for('home') }}
+    <br>
+    {{ url_for('home1',id=1101) }}
+    <br>
+    {{ url_for('home',id=1101) }}  <!-- 模板不对应，参数以查询参数形式返回。 -->
+    <br>
+    {{ url_for('home1',id=1101,addr='bj') }}  <!-- 查询参数/路径参数 共同使用 -->
+    <br>
+    <a href="/home/">访问home路径的内容！</a>  <!-- 写死路径 -->
+    <br>
+    <a href="{{ url_for('home') }}">访问home路径的内容！</a>  <!-- 动态路径 -->
+</body>
+</html>

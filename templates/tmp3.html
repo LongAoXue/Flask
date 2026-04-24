@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> 流程控制 </title>
+</head>
+<body>
+    <h1>选择结构-if选择结构</h1>
+
+    <h3>单分支</h3>
+    {% if uname == '小脑斧' %}
+        <p> 小脑斧爱吃肉肉 </p>
+    {% endif %}
+    <hr>
+    <h3>双分支</h3>
+    {% if uname == '大脑斧' %}
+        <p> 大脑斧爱吃肉肉 </p>
+    {% else %}
+        <p> 开心 </p>
+    {% endif %}
+    <hr>
+    <h3>多分支</h3>
+    {% if uname == '小脑斧' %}
+        <p> 小脑斧爱吃肉肉 </p>
+    {% elif uname == '大脑斧' %}
+        <p> 大脑斧生气了 </p>
+    {% else %}
+        <p> 找肉肉 </p>
+    {% endif %}
+</body>
+</html>
+
+
