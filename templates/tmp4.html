@@ -7,33 +7,20 @@
     <title>宏</title>
 </head>
 
-{% macro inp(type,name="",value="") %}
-    <input type="{{type}}" name="{{name}}" value="{{value}}">
-{% endmacro %}
+{% import 'macros/common.html' as common %}
+
 <body>
     <h1><span style="color:red;"> 宏的使用 </span> </h1>
-    <table>
-        <tr>
-            <td>用户名：</td><td><input type="text" name="" value=""></td>
-        </tr>
-        <tr>
-            <td>密码：</td><td><input type="password" name="" value=""></td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="登录"></td>
-        </tr>
-    </table>
-
     <hr>
     <table>
         <tr>
-            <td>用户名：</td><td>{{inp('text','name')}}</td>
+            <td>用户名：</td><td>{{common.inp('name',name='小脑斧')}}</td>
         </tr>
         <tr>
-            <td>密码：</td><td>{{inp('password','pwd')}}</td>
+            <td>密码：</td><td>{{common.inp('password','pwd',value='admin')}}</td>
         </tr>
         <tr>
-            <td>{{inp('submit',value='登录')}}</td>
+            <td>{{common.inp('submit',value='登录')}}</td>
         </tr>
     </table>
 
