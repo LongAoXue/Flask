@@ -3,7 +3,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('tmp4.html')
+    nick='少羽'
+    return render_template('tmp4.html', nick=nick)
 
 if __name__ == '__main__':
     app.run(debug=True)

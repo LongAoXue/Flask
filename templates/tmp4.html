@@ -7,22 +7,21 @@
     <title>宏</title>
 </head>
 
-{% import 'macros/common.html' as common %}
+{% import 'macros/common.html' as common with context %}
 
 <body>
     <h1><span style="color:red;"> 宏的使用 </span> </h1>
     <hr>
     <table>
         <tr>
-            <td>用户名：</td><td>{{common.inp('name',name='usename',value='小脑斧')}}</td>
+            <td>用户名：</td><td>{{common.inp('name')}}</td>
         </tr>
         <tr>
-            <td>密码：</td><td>{{common.inp('password','pwd',value='admin')}}</td>
+            <td>密码：</td><td>{{common.inp('password','pwd')}}</td>
         </tr>
         <tr>
             <td>{{common.inp('submit',value='登录')}}</td>
         </tr>
     </table>
-
 </body>
 </html>
