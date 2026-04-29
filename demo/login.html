@@ -1,31 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<!-- http-equiv="Content-Type" 告诉浏览器，这是在设置文档内容类型相关信息。 -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>登录</title>
-    <!-- link链接 relationship="样式表" 类型=层叠样式表（CSS）“hyper-reference（超链接引用）地址="../css/login.css"-->
-    <link rel="stylesheet" type="text/css" href="../css/login.css" />
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <title>会员登录</title>
+    <!-- 引入外部CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 可选：引入FontAwesome（用于输入框图标） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <h2 class="text-center">登录</h2>
-            <form action="../index.html" method="post">
-                <div class="form-group">
-                    <label for="username">用户名</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
-                </div>
-                <div class="form-group">
-                    <label for="password">密码</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
-                </div>
-                <button type="submit" class="btn btn-primary">登录</button>
-            </form>
-        </div>
+    <div class="form-container">
+        <h2>会员登录</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="邮箱" required>
+            </div>
+            <div class="form-group password">
+                <input type="password" name="password" placeholder="密码" required>
+            </div>
+            <button type="submit" class="btn">登录</button>
+            <div class="form-link">
+                <a href="register.html">忘记密码？</a>
+            </div>
+        </form>
     </div>
-</div>
+
+    <!-- 引入外部JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -2,36 +2,31 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>注册页面</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/body.css" />
+    <title>会员注册</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入FontAwesome的CDN链接 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="container">
-    <section id="content">
+    <div class="form-container">
+        <h2>会员注册</h2>
         <form action="" method="post">
-            <h1>会员注册</h1>
-            <div>
-                <input type="text" placeholder="用户名" required="" id="username" name="username"/>
+            <div class="form-group">
+                <input type="text" name="username" placeholder="邮箱" required>
             </div>
-            <div>
-                <input type="password" placeholder="密码" required="" id="password" name="password"/>
+            <div class="form-group password">
+                <input type="password" name="password" placeholder="密码" required>
             </div>
-            <div>
-                <input type="password" placeholder="确认密码" required="" id="confirm_password" name="confirm_password"/>
+            <div class="form-group password">
+                <input type="password" name="repassword" placeholder="确认密码" required>
             </div>
-            <div>
-                <span class="help-block u-errormessage" id="js-server-helpinfo">&nbsp;</span>
+            <button type="submit" class="btn">注册</button>
+            <div class="form-link">
+                <a href="login.html">去登录</a>
             </div>
-            <div>
-                <!-- <input type="submit" value="Log in" /> -->
-                <input type="submit" value="注册"/>
-                <a href="#">去登录</a>
-                <!-- <a href="#">Register</a> -->
-            </div>
-        </form><!-- form -->
-    </section><!-- content -->
-</div>
-<!-- container -->
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
