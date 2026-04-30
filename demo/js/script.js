@@ -13,3 +13,14 @@ window.onload = function() {
         }
     }
 }
+
+// 给登录页面的“登录”按钮加跳转
+function validateAndRedirect() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    if (username === '' || password === '') {
+        alert('用户名和密码不能为空');
+    } else {
+        window.location.href = 'http://www.myxnncfu.ccwu.cc';
+    }
+}
